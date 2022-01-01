@@ -336,9 +336,9 @@ void statusSet(int num)
   {
     case 1:
       if ( digitalRead(OUT) )// pin from opto condition
-      {   
+      {
         optoErrorMsg("OPTOCLEN ERROR");
-        break;                
+        break;
       }
       firstOptMsg = true;
       status.heating = true;
@@ -360,9 +360,9 @@ void statusSet(int num)
       break;
     case 5:
       if ( digitalRead(OUT) )// pin from opto condition
-      {   
+      {
         optoErrorMsg("OPTOCLEN ERROR");
-        break;                
+        break;
       }
       firstOptMsg = true;
       status.heating = true;
@@ -652,8 +652,7 @@ void updateSerial()
   optoCheck();
   displayStatus();
   manControl();
-  
-  
+
   while (Serial.available())
     SIM.write(Serial.read());
   
